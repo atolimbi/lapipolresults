@@ -30,6 +30,8 @@ jobs:
       - name: Run unit tests
         run: npm test
       - name: setup Git config
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           git config user.name "<user>"
           git config user.email "<email>"
