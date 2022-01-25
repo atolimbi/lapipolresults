@@ -29,5 +29,9 @@ jobs:
         run: npm ci
       - name: Run unit tests
         run: npm test
+      - name: setup Git config
+        run: |
+          git config user.name "GitHub Actions GHPage Bot"
+          git config user.email "<>"
       - name: Deploy GitHub Page
         run: npm run deploy
