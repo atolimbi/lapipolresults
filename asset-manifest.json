@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lapipolresults/static/css/main.e7137385.css",
-    "main.js": "/lapipolresults/static/js/main.9ffe8ef3.js",
+    "main.js": "/lapipolresults/static/js/main.8ea8f77e.js",
     "static/js/787.c1151b5e.chunk.js": "/lapipolresults/static/js/787.c1151b5e.chunk.js",
     "index.html": "/lapipolresults/index.html",
     "main.e7137385.css.map": "/lapipolresults/static/css/main.e7137385.css.map",
-    "main.9ffe8ef3.js.map": "/lapipolresults/static/js/main.9ffe8ef3.js.map",
+    "main.8ea8f77e.js.map": "/lapipolresults/static/js/main.8ea8f77e.js.map",
     "787.c1151b5e.chunk.js.map": "/lapipolresults/static/js/787.c1151b5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7137385.css",
-    "static/js/main.9ffe8ef3.js"
+    "static/js/main.8ea8f77e.js"
   ]
 }
