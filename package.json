@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "prettier-fix-all": "prettier --write \"**/*.{js,jsx,json,yml,yaml,css,md)}\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "browserslist": {
     "production": [
