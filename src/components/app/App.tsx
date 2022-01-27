@@ -1,27 +1,15 @@
-import { Container, CssBaseline, Divider } from '@mui/material';
-import SummaryGroupContainer from 'components/summaryGroupContainer/SummaryGroupContainer';
-import TournamentCardContainer from 'components/tournamentCardContainer/TournamentCardContainer';
-import { BOARD_RESULTS } from 'data/boardResults';
-import { playersInfo } from 'data/players';
-import { SummaryInfo } from 'interfaces/_index';
+import { Container, CssBaseline } from '@mui/material';
+import HomePage from 'components/pages/Home';
+import MarioPartySuperstarsPage from 'components/pages/MarioPartySuperstars';
+import YugiOHPage from 'components/pages/YugiOH';
 
 function App() {
-  const summaryInfo: SummaryInfo = {
-    players: playersInfo,
-    gamesResults: BOARD_RESULTS,
-  };
-  const latestFiveGames = { latestGames: BOARD_RESULTS.slice(0, 5) };
   return (
     <>
       <CssBaseline>
         <Container maxWidth="lg">
-          <Divider />
-          <div>
-            <SummaryGroupContainer {...summaryInfo}></SummaryGroupContainer>
-            <TournamentCardContainer
-              {...latestFiveGames}
-            ></TournamentCardContainer>
-          </div>
+          <MarioPartySuperstarsPage></MarioPartySuperstarsPage>
+          <YugiOHPage></YugiOHPage>
         </Container>
       </CssBaseline>
     </>

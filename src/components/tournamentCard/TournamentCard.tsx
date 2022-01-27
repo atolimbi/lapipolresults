@@ -8,7 +8,7 @@ import {
   CardHeader,
 } from '@mui/material';
 import { red } from '@mui/material/colors';
-import { GameMatch, Results } from 'interfaces/_index';
+import { GameMatch, Results } from 'models/interfaces/_index';
 
 function TournamentCard(props: GameMatch) {
   const winnerPlayer: Results | undefined = props.playerResults.find(
