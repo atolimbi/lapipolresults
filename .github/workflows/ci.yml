@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "atolimbi"
           git config user.email "leonato19@gmail.com"
-          git remote set-url origin https://atolimbi:${{ secrets.ACCESS_TOKEN }}@github.com/atolimbi/lapipolresults
+          git remote set-url origin https://atolimbi:${{ GITHUB_TOKEN }}@github.com/atolimbi/lapipolresults
       - name: Deploy GitHub Page
         run: npm run deploy
