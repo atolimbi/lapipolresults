@@ -1,12 +1,14 @@
 import { Container, CssBaseline } from '@mui/material';
-import MarioPartySuperstarsPage from 'components/pages/MarioPartySuperstars';
-import YugiOHPage from 'components/pages/YugiOH';
+import GameSelector from 'components/gameSelector/gameSelector';
+import MarioPartySuperstarsPage from 'components/_pages/MarioPartySuperstars';
+import YugiOHPage from 'components/_pages/YugiOH';
 
 function App() {
   return (
     <>
       <CssBaseline>
         <Container maxWidth="lg">
+          <GameSelector></GameSelector>
           <MarioPartySuperstarsPage></MarioPartySuperstarsPage>
           <YugiOHPage></YugiOHPage>
         </Container>

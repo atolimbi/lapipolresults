@@ -13,9 +13,9 @@ import {
   Results,
   GameMatch,
 } from 'models/interfaces/_index';
-import styles from './SummaryGroupContainer.module.css';
+import styles from './marioPartySuperStarsSummary.module.css';
 
-function SummaryGroupContainer(props: SummaryInfo) {
+function MarioPartySuperstarsSummary(props: SummaryInfo) {
   const getAccumulated = (
     playerName: string,
     itemSearched: string,
@@ -90,4 +90,4 @@ function SummaryGroupContainer(props: SummaryInfo) {
   );
 }
 
-export default SummaryGroupContainer;
+export default MarioPartySuperstarsSummary;

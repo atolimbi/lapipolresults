@@ -1,12 +1,5 @@
 import { Casino } from '@mui/icons-material';
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-} from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { GameMatch, Results } from 'models/interfaces/_index';
 
@@ -42,9 +35,9 @@ function TournamentCard(props: GameMatch) {
           <span>{loserPlayer?.playerName}</span>
         </div>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button variant="contained">Details</Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

@@ -1,4 +1,4 @@
-import SummaryGroupContainer from 'components/summaryGroupContainer/SummaryGroupContainer';
+import MarioPartySuperstarsSummary from 'components/marioPartySuperstarsSummary/marioPartySuperStarsSummary';
 import TournamentCardContainer from 'components/tournamentCardContainer/TournamentCardContainer';
 import { BOARD_RESULTS } from 'data/MarioParty/boardResults';
 import { playersInfo } from 'data/players';
@@ -12,7 +12,9 @@ function MarioPartySuperstarsPage() {
   const latestFiveGames = { latestGames: BOARD_RESULTS.slice(0, 5) };
   return (
     <div>
-      <SummaryGroupContainer {...summaryInfo}></SummaryGroupContainer>
+      <MarioPartySuperstarsSummary
+        {...summaryInfo}
+      ></MarioPartySuperstarsSummary>
       <TournamentCardContainer {...latestFiveGames}></TournamentCardContainer>
     </div>
   );
