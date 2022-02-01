@@ -1,8 +1,10 @@
+import { Box, Button } from '@mui/material';
 import MarioPartySuperstarsSummary from 'components/marioPartySuperstarsSummary/marioPartySuperStarsSummary';
 import TournamentCardContainer from 'components/tournamentCardContainer/TournamentCardContainer';
 import { BOARD_RESULTS } from 'data/MarioParty/boardResults';
 import { playersInfo } from 'data/players';
 import { SummaryInfo } from 'models/interfaces/_index';
+import { Link } from 'react-router-dom';
 
 function MarioPartySuperstarsPage() {
   const summaryInfo: SummaryInfo = {
@@ -11,12 +13,17 @@ function MarioPartySuperstarsPage() {
   };
   const latestFiveGames = { latestGames: BOARD_RESULTS.slice(0, 5) };
   return (
-    <div>
-      <MarioPartySuperstarsSummary
-        {...summaryInfo}
-      ></MarioPartySuperstarsSummary>
-      <TournamentCardContainer {...latestFiveGames}></TournamentCardContainer>
-    </div>
+    <>
+      <Box sx={{ mb: 4 }}>
+        <MarioPartySuperstarsSummary
+          {...summaryInfo}
+        ></MarioPartySuperstarsSummary>
+        <TournamentCardContainer {...latestFiveGames}></TournamentCardContainer>
+      </Box>
+      <Button component={Link} to="/" variant="contained">
+        Return Home
+      </Button>
+    </>
   );
 }
 

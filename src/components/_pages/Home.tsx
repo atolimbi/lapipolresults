@@ -1,5 +1,7 @@
+import GameSelector from 'components/gameSelector/gameSelector';
+
 function HomePage() {
-  return <div> Home Page</div>;
+  return <GameSelector></GameSelector>;
 }
 
 export default HomePage;
