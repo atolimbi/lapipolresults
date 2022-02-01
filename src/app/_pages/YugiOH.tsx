@@ -1,10 +1,12 @@
 import { Box, Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 function YugiOHPage() {
+  const { t } = useTranslation();
   return (
     <>
-      <h2>Yugi-Oh results'summary</h2>
+      <h2>{t('yugi.title')}</h2>
       <Box sx={{ mb: 4 }}>
         <p>
           <strong>Javier</strong>: 6 Vs <strong>Camilo</strong>: 0

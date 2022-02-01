@@ -1,6 +1,6 @@
 import { Box, Button } from '@mui/material';
-import MarioPartySuperstarsSummary from 'components/marioPartySuperstarsSummary/marioPartySuperStarsSummary';
-import TournamentCardContainer from 'components/tournamentCardContainer/TournamentCardContainer';
+import MarioPartySuperstarsSummary from 'app/components/marioPartySuperstarsSummary/marioPartySuperStarsSummary';
+import TournamentCardContainer from 'app/components/tournamentCardContainer/TournamentCardContainer';
 import { BOARD_RESULTS } from 'data/MarioParty/boardResults';
 import { playersInfo } from 'data/players';
 import { SummaryInfo } from 'models/interfaces/_index';

@@ -1,7 +1,8 @@
 import React from 'react';
+import './i18n';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from 'components/app/App';
+import App from 'app/App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 

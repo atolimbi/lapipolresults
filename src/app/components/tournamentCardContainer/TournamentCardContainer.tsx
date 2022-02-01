@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import TournamentCard from 'components/tournamentCard/TournamentCard';
+import TournamentCard from 'app/components/tournamentCard/TournamentCard';
 import { GameMatch } from 'models/interfaces/gameMatch';
 
 function TournamentCardContainer(props: Record<string, Array<GameMatch>>) {

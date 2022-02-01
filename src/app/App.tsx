@@ -1,7 +1,7 @@
 import { Container, CssBaseline } from '@mui/material';
-import HomePage from 'components/_pages/Home';
-import MarioPartySuperstarsPage from 'components/_pages/MarioPartySuperstars';
-import YugiOHPage from 'components/_pages/YugiOH';
+import HomePage from 'app/_pages/Home';
+import MarioPartySuperstarsPage from 'app/_pages/MarioPartySuperstars';
+import YugiOHPage from 'app/_pages/YugiOH';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
