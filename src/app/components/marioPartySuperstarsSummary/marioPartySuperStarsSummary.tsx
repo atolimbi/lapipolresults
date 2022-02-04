@@ -13,9 +13,11 @@ import {
   Results,
   GameMatch,
 } from 'models/interfaces/_index';
+import { useTranslation } from 'react-i18next';
 import styles from './marioPartySuperStarsSummary.module.css';
 
 function MarioPartySuperstarsSummary(props: SummaryInfo) {
+  const { t } = useTranslation();
   const getAccumulated = (
     playerName: string,
     itemSearched: string,
@@ -43,7 +45,7 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
 
   return (
     <div>
-      <h2>Mario Party Superstars result's summary</h2>
+      <h2>{t('marioPartySuperstars.title')}</h2>
       <List>
         {props.players.map((player: Player) => (
           <ListItem alignItems="flex-start">

@@ -2,7 +2,16 @@
   "home": {
     "pickgame": "Pick a game"
   },
+  "marioPartySuperstars": {
+    "title": "Mario Party Super-Stars's Results",
+    "latestGames": {
+      "title": "Most recents games"
+    }
+  },
   "yugi": {
-    "title": "Yugi-oh's summary results"
+    "title": "Yugi-oh's Results"
+  },
+  "button": {
+    "back": "Back"
   }
 }
