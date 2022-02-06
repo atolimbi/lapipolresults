@@ -1,4 +1,4 @@
-import { Casino, LabelSharp } from '@mui/icons-material';
+import { Casino } from '@mui/icons-material';
 import { Avatar, Card, CardContent, CardHeader } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { GameMatch, Results } from 'models/interfaces/_index';
