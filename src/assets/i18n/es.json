@@ -3,6 +3,13 @@
     "pickgame": "Seleccione un juego"
   },
   "marioPartySuperstars": {
+    "stage": {
+      "woodyWoods": "Bosque Boscoso",
+      "peachCake": "Pastel de Cumpleaños de Peach ",
+      "horrorLand": "Mundo del Terror",
+      "spaceLand": "Mundo Espacial",
+      "yoshiIsland": "Isla Tropical de Yoshi"
+    },
     "title": "Resultados Mario Party Super-Stars",
     "latestGames": {
       "title": "Juegos mas recientes"
@@ -13,5 +20,10 @@
   },
   "button": {
     "back": "Atras"
+  },
+  "labels": {
+    "winner": "Ganador",
+    "loser": "Ultimo lugar",
+    "turnsPlayed": "Turnos jugados"
   }
 }

@@ -1,9 +1,11 @@
-import { Casino } from '@mui/icons-material';
+import { Casino, LabelSharp } from '@mui/icons-material';
 import { Avatar, Card, CardContent, CardHeader } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { GameMatch, Results } from 'models/interfaces/_index';
+import { useTranslation } from 'react-i18next';
 
 function TournamentCard(props: GameMatch) {
+  const { t } = useTranslation();
   const winnerPlayer: Results | undefined = props.playerResults.find(
     (element: Results) => element.finalPlace === 'first'
   );
@@ -18,20 +20,20 @@ function TournamentCard(props: GameMatch) {
             <Casino />
           </Avatar>
         }
-        title={props.boardName}
+        title={t(`marioPartySuperstars.${props.boardName}`)}
         subheader={props.endGameDate}
       ></CardHeader>
       <CardContent>
         <div>
-          <strong>Number of turns: </strong>
+          <strong>{t('labels.turnsPlayed')}: </strong>
           <span>{props.amountOfTurns}</span>
         </div>
         <div>
-          <strong>Winner: </strong>
+          <strong>{t('labels.winner')}: </strong>
           <span>{winnerPlayer?.playerName}</span>
         </div>
         <div>
-          <strong>Last Place: </strong>
+          <strong>{t('labels.loser')}: </strong>
           <span>{loserPlayer?.playerName}</span>
         </div>
       </CardContent>

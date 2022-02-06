@@ -3,6 +3,13 @@
     "pickgame": "Pick a game"
   },
   "marioPartySuperstars": {
+    "stage": {
+      "woodyWoods": "Woody Woods",
+      "peachCake": "Peach's Birthday Cake",
+      "horrorLand": "Horror Land",
+      "spaceLand": "Space Land",
+      "yoshiIsland": "Yoshi's Tropical Island"
+    },
     "title": "Mario Party Super-Stars's Results",
     "latestGames": {
       "title": "Most recents games"
@@ -13,5 +20,10 @@
   },
   "button": {
     "back": "Back"
+  },
+  "labels": {
+    "winner": "Winner",
+    "loser": "Last place",
+    "turnsPlayed": "Turns played"
   }
 }
