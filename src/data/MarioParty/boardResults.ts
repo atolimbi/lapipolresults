@@ -3,6 +3,42 @@ import { MarioPartyBoards } from 'models/enums/marioPartySuperstarsBoards';
 
 export const BOARD_RESULTS = [
   {
+    gameId: 'eee',
+    endGameDate: '05/02/2022',
+    amountOfTurns: 15,
+    boardName: MarioPartyBoards.PEACH_CAKE,
+    playerResults: [
+      {
+        playerName: 'Mike',
+        character: 'Waluigi',
+        finalPlace: FinalPlace.FIRST,
+        amountOfStars: 3,
+        amountOfCoins: 118,
+      },
+      {
+        playerName: 'atolimbi',
+        character: 'Wario',
+        finalPlace: FinalPlace.SECOND,
+        amountOfStars: 3,
+        amountOfCoins: 76,
+      },
+      {
+        playerName: 'Kty',
+        character: 'Peach',
+        finalPlace: FinalPlace.THIRD,
+        amountOfStars: 2,
+        amountOfCoins: 21,
+      },
+      {
+        playerName: 'Leo',
+        character: 'Yoshi',
+        finalPlace: FinalPlace.FOURTH,
+        amountOfStars: 2,
+        amountOfCoins: 16,
+      },
+    ],
+  },
+  {
     gameId: 'ddd',
     endGameDate: '29/01/2022',
     amountOfTurns: 20,
