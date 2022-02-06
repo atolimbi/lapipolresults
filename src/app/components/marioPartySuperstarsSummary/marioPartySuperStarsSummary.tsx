@@ -48,7 +48,7 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
       <h2>{t('marioPartySuperstars.title')}</h2>
       <List>
         {props.players.map((player: Player) => (
-          <ListItem alignItems="flex-start">
+          <ListItem alignItems="flex-start" key={player.playerId}>
             <ListItemAvatar>
               <Avatar sx={{ bgcolor: blueGrey[800] }}>
                 <Person></Person>

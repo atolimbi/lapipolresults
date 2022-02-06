@@ -10,7 +10,7 @@ function TournamentCardContainer(props: Record<string, Array<GameMatch>>) {
       <h2>{t('marioPartySuperstars.latestGames.title')}</h2>
       <Grid container spacing={2}>
         {props.latestGames.map((game: GameMatch) => (
-          <Grid item>
+          <Grid item key={game.gameId}>
             <TournamentCard {...game}></TournamentCard>
           </Grid>
         ))}
