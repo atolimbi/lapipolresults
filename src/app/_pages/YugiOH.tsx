@@ -13,7 +13,7 @@ function YugiOHPage() {
             <strong>Javier</strong>: 6 Vs <strong>Camilo</strong>: 0
           </p>
           <p>
-            <strong>Leo</strong>: 1 Vs <strong>Atolimbi</strong>: 2
+            <strong>Leo</strong>: 1 Vs <strong>Atolimbi</strong>: 5
           </p>
         </Box>
         <Button component={Link} to="/" variant="contained">

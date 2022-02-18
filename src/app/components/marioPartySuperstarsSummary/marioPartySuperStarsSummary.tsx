@@ -1,12 +1,14 @@
 import { MonetizationOn, Person, Star } from '@mui/icons-material';
 import {
   Avatar,
+  Box,
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
 import { blueGrey, yellow } from '@mui/material/colors';
+import { fontSize } from '@mui/system';
 import {
   Player,
   SummaryInfo,
@@ -45,7 +47,16 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
 
   return (
     <div>
-      <h2>{t('marioPartySuperstars.title')}</h2>
+      <Box>
+        <Box sx={{ fontFamily: 'monospace', fontSize: 25 }}>
+          <span>M</span>
+          <span>A</span>
+          <span>R</span>
+          <span>I</span>
+          <span>O</span> Party Superstars
+        </Box>
+        <h2>{t('marioPartySuperstars.title')}</h2>
+      </Box>
       <List>
         {props.players.map((player: Player) => (
           <ListItem alignItems="flex-start" key={player.playerId}>
