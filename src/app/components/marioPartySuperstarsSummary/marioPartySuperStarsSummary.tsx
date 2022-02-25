@@ -8,7 +8,6 @@ import {
   ListItemText,
 } from '@mui/material';
 import { blueGrey, yellow } from '@mui/material/colors';
-import { fontSize } from '@mui/system';
 import {
   Player,
   SummaryInfo,
