@@ -1,29 +1,36 @@
 // Players of group La Pipol
 
+import { Players } from 'models/enums/players';
+
 export const playersInfo = [
   {
     playerId: 'aaa',
     playerEmail: 'mike@gmail.com',
-    playerName: 'Mike',
+    playerName: Players.MIKE,
   },
   {
     playerId: 'bbb',
     playerEmail: 'leo@gmail.com',
-    playerName: 'Leo',
+    playerName: Players.HOME,
   },
   {
     playerId: 'ccc',
     playerEmail: 'atolimbi@gmail.com',
-    playerName: 'atolimbi',
+    playerName: Players.ATO,
   },
   {
     playerId: 'ddd',
     playerEmail: 'kty@gmail.com',
-    playerName: 'Kty',
+    playerName: Players.CATA,
   },
   {
     playerId: 'eee',
     playerEmail: 'vi@gmail.com',
-    playerName: 'Vi',
+    playerName: Players.VIVI,
+  },
+  {
+    playerId: 'fff',
+    playerEmail: 'bate@gmail.com',
+    playerName: Players.BATE,
   },
 ];
