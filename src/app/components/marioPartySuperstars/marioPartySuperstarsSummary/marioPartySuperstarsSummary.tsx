@@ -1,14 +1,6 @@
-import { MonetizationOn, Person, Star } from '@mui/icons-material';
-import {
-  Avatar,
-  Box,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from '@mui/material';
-import { blueGrey, yellow, red, green, blue } from '@mui/material/colors';
+import { MonetizationOn, Star } from '@mui/icons-material';
+import { Box, List, ListItem, ListItemText } from '@mui/material';
+import { yellow } from '@mui/material/colors';
 import {
   Player,
   SummaryInfo,
