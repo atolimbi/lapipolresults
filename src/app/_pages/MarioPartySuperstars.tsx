@@ -1,5 +1,6 @@
 import { Box, Button, Fade } from '@mui/material';
-import MarioPartySuperstarsSummary from 'app/components/marioPartySuperstarsSummary/marioPartySuperStarsSummary';
+import MarioPartySuperstarsSummary from 'app/components/marioPartySuperstars/marioPartySuperstarsSummary/marioPartySuperstarsSummary';
+import MarioPartySuperstarsTitle from 'app/components/marioPartySuperstars/marioPartySuperstarsTitle/marioPartySuperstarsTitle';
 import TournamentCardContainer from 'app/components/tournamentCardContainer/TournamentCardContainer';
 import { BOARD_RESULTS } from 'data/MarioParty/boardResults';
 import { playersInfo } from 'data/players';
@@ -18,6 +19,7 @@ function MarioPartySuperstarsPage() {
     <Fade in={true}>
       <Box>
         <Box sx={{ mb: 4 }}>
+          <MarioPartySuperstarsTitle></MarioPartySuperstarsTitle>
           <MarioPartySuperstarsSummary
             {...summaryInfo}
           ></MarioPartySuperstarsSummary>

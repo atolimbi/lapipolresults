@@ -7,6 +7,42 @@ import { Players } from 'models/enums/players';
 
 export const BOARD_RESULTS = [
   {
+    gameId: 'kkk',
+    endGameDate: '23/04/2022',
+    amountOfTurns: 20,
+    boardName: MarioPartyBoards.HORROR_LAND,
+    playerResults: [
+      {
+        playerName: Players.ATO,
+        character: MarioPartyCharacters.WARIO,
+        finalPlace: FinalPlace.FIRST,
+        amountOfStars: 6,
+        amountOfCoins: 168,
+      },
+      {
+        playerName: Players.HOME,
+        character: MarioPartyCharacters.WALUIGI,
+        finalPlace: FinalPlace.SECOND,
+        amountOfStars: 6,
+        amountOfCoins: 93,
+      },
+      {
+        playerName: Players.VIVI,
+        character: MarioPartyCharacters.ROSALINA,
+        finalPlace: FinalPlace.THIRD,
+        amountOfStars: 1,
+        amountOfCoins: 53,
+      },
+      {
+        playerName: Players.CATA,
+        character: MarioPartyCharacters.YOSHI,
+        finalPlace: FinalPlace.FOURTH,
+        amountOfStars: 1,
+        amountOfCoins: 2,
+      },
+    ],
+  },
+  {
     gameId: 'jjj',
     endGameDate: '15/04/2022',
     amountOfTurns: 20,

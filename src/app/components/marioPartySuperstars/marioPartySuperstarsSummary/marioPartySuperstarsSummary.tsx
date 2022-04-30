@@ -6,8 +6,9 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  Typography,
 } from '@mui/material';
-import { blueGrey, yellow } from '@mui/material/colors';
+import { blueGrey, yellow, red, green, blue } from '@mui/material/colors';
 import {
   Player,
   SummaryInfo,
@@ -15,7 +16,7 @@ import {
   GameMatch,
 } from 'models/interfaces/_index';
 import { useTranslation } from 'react-i18next';
-import styles from './marioPartySuperStarsSummary.module.css';
+import styles from './marioPartySuperstarsSummary.module.css';
 
 function MarioPartySuperstarsSummary(props: SummaryInfo) {
   const { t } = useTranslation();
@@ -46,30 +47,20 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
 
   return (
     <div>
-      <Box>
-        <Box sx={{ fontFamily: 'monospace', fontSize: 25 }}>
-          <span>M</span>
-          <span>A</span>
-          <span>R</span>
-          <span>I</span>
-          <span>O</span> Party Superstars
-        </Box>
-        <h2>{t('marioPartySuperstars.title')}</h2>
-      </Box>
+      <h2>{t('marioPartySuperstars.title')} - Acumulados</h2>
       <List>
         {props.players.map((player: Player) => (
           <ListItem alignItems="flex-start" key={player.playerId}>
-            <ListItemAvatar>
-              <Avatar sx={{ bgcolor: blueGrey[800] }}>
-                <Person></Person>
-              </Avatar>
-            </ListItemAvatar>
             <ListItemText
-              primary={player.playerName}
+              primary={
+                <Box display="flex" alignItems="center">
+                  <strong>{player.playerName}</strong>
+                </Box>
+              }
               secondary={
-                <>
+                <Box>
                   <span className={styles.item}>
-                    Total <Star sx={{ color: yellow[700] }}></Star> :
+                    <Star sx={{ color: yellow[700] }}></Star>:
                     <strong>
                       {getAccumulated(
                         player.playerName,
@@ -79,10 +70,9 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
                     </strong>
                   </span>
                   <span className={styles.item}>
-                    Total{' '}
                     <MonetizationOn
                       sx={{ color: yellow[700] }}
-                    ></MonetizationOn>{' '}
+                    ></MonetizationOn>
                     :
                     <strong>
                       {getAccumulated(
@@ -92,7 +82,7 @@ function MarioPartySuperstarsSummary(props: SummaryInfo) {
                       )}
                     </strong>
                   </span>
-                </>
+                </Box>
               }
             ></ListItemText>
           </ListItem>
