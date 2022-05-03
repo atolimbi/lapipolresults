@@ -1,61 +1,21 @@
-import { Box, Typography } from '@mui/material';
-import { blue, green, red, yellow } from '@mui/material/colors';
+import { Typography } from '@mui/material';
+import styles from './marioPartySuperstarsTitle.module.css';
 
 function MarioPartySuperstarsTitle() {
   return (
-    <Box>
+    <div className={styles.mpsTitle}>
       <Typography
-        sx={{
-          fontFamily: 'monospace',
-          fontSize: 25,
-          color: red[400],
-          display: 'inline',
-        }}
+        sx={{ fontFamily: 'monospace', fontSize: '2rem', display: 'inline' }}
       >
-        M
+        <span className={styles.mpsTitle__m}>M</span>
+        <span className={styles.mpsTitle__a}>A</span>
+        <span className={styles.mpsTitle__r}>R</span>
+        <span className={styles.mpsTitle__i}>I</span>
+        <span className={styles.mpsTitle__o}>O</span>
       </Typography>
-      <Typography
-        sx={{
-          fontFamily: 'monospace',
-          fontSize: 25,
-          color: yellow[500],
-          display: 'inline',
-        }}
-      >
-        A
-      </Typography>
-      <Typography
-        sx={{
-          fontFamily: 'monospace',
-          fontSize: 25,
-          color: blue[800],
-          display: 'inline',
-        }}
-      >
-        R
-      </Typography>
-      <Typography
-        sx={{
-          fontFamily: 'monospace',
-          fontSize: 25,
-          color: red[400],
-          display: 'inline',
-        }}
-      >
-        I
-      </Typography>
-      <Typography
-        sx={{
-          fontFamily: 'monospace',
-          fontSize: 25,
-          color: green[700],
-          display: 'inline',
-        }}
-      >
-        O
-      </Typography>
-      - Party Superstars
-    </Box>
+      <span> - </span>
+      <span> Superstars </span>
+    </div>
   );
 }
 

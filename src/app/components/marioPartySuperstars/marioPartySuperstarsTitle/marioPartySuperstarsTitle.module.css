@@ -1,0 +1,22 @@
+.mpsTitle {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+}
+
+.mpsTitle__m {
+  color: rgb(248, 8, 8);
+}
+.mpsTitle__a {
+  color: rgb(65, 196, 13);
+}
+.mpsTitle__r {
+  color: rgb(243, 243, 10);
+}
+.mpsTitle__i {
+  color: rgb(22, 130, 192);
+}
+.mpsTitle__o {
+  color: rgb(65, 196, 13);
+}
