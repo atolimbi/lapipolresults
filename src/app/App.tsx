@@ -15,10 +15,7 @@ function App() {
             <Header></Header>
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
-              <Route
-                path="/marioparty"
-                element={<MarioPartySuperstarsPage />}
-              ></Route>
+              <Route path="/marioparty" element={<MarioPartySuperstarsPage />}></Route>
               <Route path="/yugioh" element={<YugiOHPage />}></Route>
             </Routes>
           </Container>

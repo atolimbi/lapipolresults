@@ -20,12 +20,8 @@ function MarioPartySuperstarsPage() {
       <Box>
         <Box sx={{ mb: 4 }}>
           <MarioPartySuperstarsTitle></MarioPartySuperstarsTitle>
-          <MarioPartySuperstarsSummary
-            {...summaryInfo}
-          ></MarioPartySuperstarsSummary>
-          <TournamentCardContainer
-            {...latestFiveGames}
-          ></TournamentCardContainer>
+          <MarioPartySuperstarsSummary {...summaryInfo}></MarioPartySuperstarsSummary>
+          <TournamentCardContainer {...latestFiveGames}></TournamentCardContainer>
         </Box>
         <Button component={Link} to="/" variant="contained">
           {t('button.back')}

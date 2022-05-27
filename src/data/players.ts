@@ -33,4 +33,14 @@ export const playersInfo = [
     playerEmail: 'bate@gmail.com',
     playerName: Players.BATE,
   },
+  {
+    playerId: 'ggg',
+    playerEmail: 'jeik06@gmail.com',
+    playerName: Players.JEIK,
+  },
+  {
+    playerId: 'hhh',
+    playerEmail: 'aleja06@gmail.com',
+    playerName: Players.ALEJA,
+  },
 ];

@@ -1,17 +1,13 @@
 import { Casino } from '@mui/icons-material';
 import { Avatar, Card, CardContent, CardHeader } from '@mui/material';
 import { red } from '@mui/material/colors';
-import { GameMatch, Results } from 'models/interfaces/_index';
+import { GameMatch, Result } from 'models/interfaces/_index';
 import { useTranslation } from 'react-i18next';
 
 function TournamentCard(props: GameMatch) {
   const { t } = useTranslation();
-  const winnerPlayer: Results | undefined = props.playerResults.find(
-    (element: Results) => element.finalPlace === 'first'
-  );
-  const loserPlayer: Results | undefined = props.playerResults.find(
-    (element: Results) => element.finalPlace === 'fourth'
-  );
+  const winnerPlayer: Result | undefined = props.playerResults.find((element: Result) => element.finalPlace === 'first');
+  const loserPlayer: Result | undefined = props.playerResults.find((element: Result) => element.finalPlace === 'fourth');
   return (
     <Card>
       <CardHeader

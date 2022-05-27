@@ -1,85 +1,43 @@
-import { MonetizationOn, Star } from '@mui/icons-material';
-import { Box, List, ListItem, ListItemText } from '@mui/material';
-import { yellow } from '@mui/material/colors';
-import {
-  Player,
-  SummaryInfo,
-  Results,
-  GameMatch,
-} from 'models/interfaces/_index';
+import { Grid } from '@mui/material';
+import { Player, SummaryInfo, Result, GameMatch } from 'models/interfaces/_index';
 import { useTranslation } from 'react-i18next';
-import styles from './marioPartySuperstarsSummary.module.css';
+import MarioPartySuperstarsPlayerCard from '../marioPartySuperstarsPlayerCard/marioPartySuperstarsPlayerCard';
 
 function MarioPartySuperstarsSummary(props: SummaryInfo) {
   const { t } = useTranslation();
-  const getAccumulated = (
-    playerName: string,
-    itemSearched: string,
-    globalResults: Array<GameMatch>
-  ): number => {
-    let amount = 0;
-    globalResults.forEach((element: GameMatch) => {
-      element.playerResults.forEach((item: Results) => {
-        let currentAmount = 0;
-        if (item.playerName === playerName) {
-          switch (itemSearched) {
-            case 'amountOfStars':
-              currentAmount = item.amountOfStars;
-              break;
-            case 'amountOfCoins':
-              currentAmount = item.amountOfCoins;
-              break;
-          }
-        }
-        amount = amount + currentAmount;
-      });
+
+  /*const getPlayerAllTimeResults = (globalResults: Array<GameMatch>, playerName: string): Array<Result> => {
+    const allTimePlayerResults: Array<Result> = [];
+    globalResults.forEach((round) => {
+      const playerResultsOnRound = round.playerResults.find((result: Result) => result.playerName === playerName);
+      if (playerResultsOnRound) {
+        allTimePlayerResults.push(playerResultsOnRound);
+      }
     });
-    return amount;
+    return allTimePlayerResults;
+  };*/
+
+  const getPlayerAllRoundsStats = (globalResults: Array<GameMatch>, playerName: string): { playerStats: Array<GameMatch>; playerName: string } => {
+    const allTimePlayerRounds: Array<GameMatch> = [];
+    globalResults.forEach((round) => {
+      const playerResultsOnRound = round.playerResults.find((result: Result) => result.playerName === playerName);
+      if (playerResultsOnRound) {
+        allTimePlayerRounds.push({ ...round, playerResults: [playerResultsOnRound] });
+      }
+    });
+    return { playerStats: allTimePlayerRounds, playerName: playerName };
   };
 
   return (
     <div>
       <h2>{t('marioPartySuperstars.title')} - Acumulados</h2>
-      <List>
-        {props.players.map((player: Player) => (
-          <ListItem alignItems="flex-start" key={player.playerId}>
-            <ListItemText
-              primary={
-                <Box display="flex" alignItems="center">
-                  <strong>{player.playerName}</strong>
-                </Box>
-              }
-              secondary={
-                <Box>
-                  <span className={styles.item}>
-                    <Star sx={{ color: yellow[700] }}></Star>:
-                    <strong>
-                      {getAccumulated(
-                        player.playerName,
-                        'amountOfStars',
-                        props.gamesResults
-                      )}
-                    </strong>
-                  </span>
-                  <span className={styles.item}>
-                    <MonetizationOn
-                      sx={{ color: yellow[700] }}
-                    ></MonetizationOn>
-                    :
-                    <strong>
-                      {getAccumulated(
-                        player.playerName,
-                        'amountOfCoins',
-                        props.gamesResults
-                      )}
-                    </strong>
-                  </span>
-                </Box>
-              }
-            ></ListItemText>
-          </ListItem>
+      <Grid container columnSpacing={2} rowSpacing={2}>
+        {props.players.map((player: Player, index: number) => (
+          <Grid item sx={{ width: '100%' }} xs={12} sm={6} md={4} key={index}>
+            <MarioPartySuperstarsPlayerCard {...getPlayerAllRoundsStats(props.gamesResults, player.playerName)}></MarioPartySuperstarsPlayerCard>
+          </Grid>
         ))}
-      </List>
+      </Grid>
     </div>
   );
 }

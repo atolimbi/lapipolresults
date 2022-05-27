@@ -1,11 +1,80 @@
 import { FinalPlace } from 'models/enums/finalPlace';
-import {
-  MarioPartyBoards,
-  MarioPartyCharacters,
-} from 'models/enums/marioPartySuperstarsInfo';
+import { MarioPartyBoards, MarioPartyCharacters } from 'models/enums/marioPartySuperstarsInfo';
 import { Players } from 'models/enums/players';
 
 export const BOARD_RESULTS = [
+  {
+    gameId: 'mmm',
+    endGameDate: '20/05/2022',
+    amountOfTurns: 20,
+    boardName: MarioPartyBoards.WOODY_WOODS,
+    playerResults: [
+      {
+        playerName: Players.ATO,
+        character: MarioPartyCharacters.LUIGI,
+        finalPlace: FinalPlace.FIRST,
+        amountOfStars: 6,
+        amountOfCoins: 47,
+      },
+      {
+        playerName: Players.HOME,
+        character: MarioPartyCharacters.DK,
+        finalPlace: FinalPlace.SECOND,
+        amountOfStars: 4,
+        amountOfCoins: 87,
+      },
+      {
+        playerName: Players.CATA,
+        character: MarioPartyCharacters.BIRDO,
+        finalPlace: FinalPlace.THIRD,
+        amountOfStars: 4,
+        amountOfCoins: 31,
+      },
+      {
+        playerName: Players.VIVI,
+        character: MarioPartyCharacters.ROSALINA,
+        finalPlace: FinalPlace.FOURTH,
+        amountOfStars: 3,
+        amountOfCoins: 97,
+      },
+    ],
+  },
+  {
+    gameId: 'lll',
+    endGameDate: '13/05/2022',
+    amountOfTurns: 20,
+    boardName: MarioPartyBoards.PEACH_CAKE,
+    playerResults: [
+      {
+        playerName: Players.ATO,
+        character: MarioPartyCharacters.WARIO,
+        finalPlace: FinalPlace.FIRST,
+        amountOfStars: 4,
+        amountOfCoins: 48,
+      },
+      {
+        playerName: Players.VIVI,
+        character: MarioPartyCharacters.ROSALINA,
+        finalPlace: FinalPlace.SECOND,
+        amountOfStars: 4,
+        amountOfCoins: 29,
+      },
+      {
+        playerName: Players.JEIK,
+        character: MarioPartyCharacters.DK,
+        finalPlace: FinalPlace.THIRD,
+        amountOfStars: 3,
+        amountOfCoins: 51,
+      },
+      {
+        playerName: Players.HOME,
+        character: MarioPartyCharacters.YOSHI,
+        finalPlace: FinalPlace.FOURTH,
+        amountOfStars: 3,
+        amountOfCoins: 0,
+      },
+    ],
+  },
   {
     gameId: 'kkk',
     endGameDate: '23/04/2022',

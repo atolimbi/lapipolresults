@@ -5,4 +5,6 @@ export const enum Players {
   ATO = 'Atolimbi',
   CATA = 'Kty',
   VIVI = 'Vi',
+  JEIK = 'Jeik',
+  ALEJA = 'Aleja',
 }

@@ -1,4 +1,4 @@
-export interface Results {
+export interface Result {
   playerName: string;
   character: string;
   finalPlace: string;
