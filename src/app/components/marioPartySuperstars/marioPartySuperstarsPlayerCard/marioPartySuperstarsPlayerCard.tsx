@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader } from '@mui/material';
+import { FinalPlace } from 'models/enums/finalPlace';
 import { GameMatch } from 'models/interfaces/gameMatch';
 import { Result } from 'models/interfaces/_index';
 
 const getAccumulatedTurns = (playerStats: Array<GameMatch>): number => {
+  // console.log(playerStats);
   let totalTurns = 0;
   playerStats.forEach((round: GameMatch) => {
     totalTurns = totalTurns + round.amountOfTurns;
@@ -24,6 +26,12 @@ function MarioPartySuperstarsPlayerCard(props: { playerStats: Array<GameMatch>; 
   const accumulatedTurns = getAccumulatedTurns(props.playerStats);
   const accumulatedRounds = props.playerStats.length;
   const accumulatedStars = getAccumulatedStars(props.playerStats.map((round: GameMatch) => round.playerResults[0]));
+  const totalWins = props.playerStats
+    .map((round: GameMatch) => round.playerResults[0])
+    .filter((result: Result) => result.finalPlace === FinalPlace.FIRST).length;
+  const totalLoses = props.playerStats
+    .map((round: GameMatch) => round.playerResults[0])
+    .filter((result: Result) => result.finalPlace === FinalPlace.FOURTH).length;
   return playerName ? (
     <Card>
       <CardContent>
@@ -36,6 +44,8 @@ function MarioPartySuperstarsPlayerCard(props: { playerStats: Array<GameMatch>; 
               <p>Total rondas: {accumulatedRounds}</p>
               <p>Total turnos: {accumulatedTurns}</p>
               <p>Total estrellas: {accumulatedStars}</p>
+              <p>Total partidas ganadas: {totalWins}</p>
+              <p>Total partidas ultimo lugar: {totalLoses}</p>
             </div>
           )}
         </CardContent>
