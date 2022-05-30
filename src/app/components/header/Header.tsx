@@ -4,12 +4,8 @@ import { Box } from '@mui/system';
 import i18n from 'i18n';
 
 function Header() {
-  const changeLanguageHandler = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    event.target.checked
-      ? i18n.changeLanguage('es')
-      : i18n.changeLanguage('en');
+  const changeLanguageHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.target.checked ? i18n.changeLanguage('es') : i18n.changeLanguage('en');
   };
 
   return (

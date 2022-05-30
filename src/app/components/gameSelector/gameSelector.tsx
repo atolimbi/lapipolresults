@@ -11,12 +11,7 @@ function GameSelector() {
       <h2>{t('home.pickgame')}</h2>
       <Stack spacing={2} direction="row">
         {GamesInfo.map((game: GameInfo) => (
-          <Button
-            key={game.id}
-            component={Link}
-            to={game.route}
-            variant="contained"
-          >
+          <Button key={game.id} component={Link} to={game.route} variant="contained">
             {game.name}
           </Button>
         ))}
