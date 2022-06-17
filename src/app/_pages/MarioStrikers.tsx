@@ -18,7 +18,7 @@ function MarioStrikersPage() {
           <AccordionDetails>
             <Typography>Empates: 0</Typography>
             <Typography>Goles Ato: 2</Typography>
-            <Typography>Goles Home: 2</Typography>
+            <Typography>Goles Home: 6</Typography>
             <Typography>Ultimos Partidos</Typography>
             <Typography>Ato: 1 - Home: 2</Typography>
             <Typography>Ato: 1 - Home: 4</Typography>
