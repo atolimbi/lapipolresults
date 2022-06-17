@@ -13,4 +13,10 @@ export const GamesInfo: Array<GameInfo> = [
     platform: 'Multiplatform',
     route: '/yugioh',
   },
+  {
+    id: 'ccc',
+    name: 'Mario Strikers',
+    platform: 'Switch',
+    route: '/marioStrikers',
+  },
 ];

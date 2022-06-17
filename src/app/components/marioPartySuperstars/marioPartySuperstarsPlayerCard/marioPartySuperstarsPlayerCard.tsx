@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FinalPlace } from 'models/enums/finalPlace';
 import { GameMatch } from 'models/interfaces/gameMatch';
 import { Result } from 'models/interfaces/_index';
@@ -22,7 +22,7 @@ const getAccumulatedStars = (playerResults: Array<Result>): number => {
 
 function MarioPartySuperstarsPlayerCard(props: { playerStats: Array<GameMatch>; playerName: string }) {
   const playerName = props.playerName;
-  const noData = <p>Sin datos para el jugador</p>;
+  const noData = <Box sx={{ p: 2 }}>Sin datos para el jugador</Box>;
   const accumulatedTurns = getAccumulatedTurns(props.playerStats);
   const accumulatedRounds = props.playerStats.length;
   const accumulatedStars = getAccumulatedStars(props.playerStats.map((round: GameMatch) => round.playerResults[0]));
@@ -33,24 +33,43 @@ function MarioPartySuperstarsPlayerCard(props: { playerStats: Array<GameMatch>; 
     .map((round: GameMatch) => round.playerResults[0])
     .filter((result: Result) => result.finalPlace === FinalPlace.FOURTH).length;
   return playerName ? (
-    <Card>
-      <CardContent>
-        <CardHeader title={playerName}></CardHeader>
-        <CardContent>
-          {props.playerStats.length <= 0 ? (
-            noData
-          ) : (
-            <div>
-              <p>Total rondas: {accumulatedRounds}</p>
-              <p>Total turnos: {accumulatedTurns}</p>
-              <p>Total estrellas: {accumulatedStars}</p>
-              <p>Total partidas ganadas: {totalWins}</p>
-              <p>Total partidas ultimo lugar: {totalLoses}</p>
-            </div>
-          )}
-        </CardContent>
-      </CardContent>
-    </Card>
+    <Box sx={{ border: 1, borderColor: 'primary.main', borderRadius: '16px' }}>
+      <Typography
+        variant="h6"
+        sx={{
+          p: 2,
+          fontFamily: 'monospace',
+          color: 'white',
+          backgroundColor: 'primary.main',
+          borderTopRightRadius: '16px',
+          borderTopLeftRadius: '16px',
+        }}
+      >
+        {playerName}
+      </Typography>
+
+      {props.playerStats.length <= 0 ? (
+        noData
+      ) : (
+        <Box sx={{ p: 2 }}>
+          <div>
+            <strong>Total rondas:</strong> {accumulatedRounds}
+          </div>
+          <div>
+            <strong>Total turnos:</strong> {accumulatedTurns}
+          </div>
+          <div>
+            <strong>Total estrellas:</strong> {accumulatedStars}
+          </div>
+          <div>
+            <strong>Total partidas ganadas:</strong> {totalWins}
+          </div>
+          <div>
+            <strong>Total partidas ultimo lugar:</strong> {totalLoses}
+          </div>
+        </Box>
+      )}
+    </Box>
   ) : (
     <span></span>
   );

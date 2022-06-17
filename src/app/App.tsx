@@ -5,6 +5,7 @@ import YugiOHPage from 'app/_pages/YugiOH';
 import { customTheme } from 'assets/MuiTheme/customTheme';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
+import MarioStrikersPage from './_pages/MarioStrikers';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/marioparty" element={<MarioPartySuperstarsPage />}></Route>
               <Route path="/yugioh" element={<YugiOHPage />}></Route>
+              <Route path="/mariostrikers" element={<MarioStrikersPage />}></Route>
             </Routes>
           </Container>
         </CssBaseline>
